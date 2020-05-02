@@ -11,6 +11,7 @@
     <!-- <link rel="stylesheet" href="debug.css"> -->
 </head>
 <body>
+<div id="app">
 <section class="section has-text-light">
     <!--HEADER COVID 19-->
     <div class="columns has-text-centered">
@@ -20,22 +21,42 @@
     <!-- INPUT RADIO BUTTONS  -->
     <div class="columns has-text-centered">
         <div class="column">
-            <input type="radio" id="test" name="jeff"><label for="test">Mundo</label>
-            <input type="radio" id="test2" name="jeff"><label for="test2">Brasil</label>
+            <input type="radio" id="local1" name="local" checked ref='radioMundo'><label for="local1">Mundo</label>
+            <input type="radio" id="local2" name="local" id="radioBrasil"><label for="local2">Brasil</label>
         </div>
-    </div>
+        </div>
+        <div class="columns">
+            <div class="column"></div>
+        </div>
 
     <!-- WORLD/BRAZIL VECTOR -->
-    <div class="columns">
-        <div class="column"></div>
+    <div class="columns ">
+        
         <div class="column has-text-centered">
             <figure>
-                <img src="img/world.png" alt="">
+                <img src="img/world.svg" alt="">
             </figure>
+        </div>
+        <div class="column" style="padding-left: 15%;">
+            <ul>
+                <li>
+                    <i class="fas fa-skull icone" style="color: #FF5555; height: 16px; width: 18px;"></i>
+                    <span class="has-text-weight-bold">{{deaths}}</span> Baixas.
+                </li>
+                <li>
+                    <i class="fas fa-folder-open icone" style="color: #948742"></i>
+                    <span class="has-text-weight-bold">{{cases}}</span>  Casos.
+                </li>
+                <li>
+                    <i class="fas fa-pills icone" style="color: #6AAB53;"></i>
+                    <span class="has-text-weight-bold">{{recovered}}</span>
+                    Recuperados.
+                </li>
+            </ul>
         </div>
     </div>
 
-    <!-- INFORMATIONS -->
+    <!-- INFORMATIONS
     <div class="columns is-mobile">
         <div class="column" style="padding-left: 15%;">
             <ul>
@@ -54,7 +75,7 @@
                 </li>
             </ul>
         </div>
-    </div>
+    </div> -->
 
     <!-- FOOTER  -->
     <footer class="footer no-background" style="padding-top: 25px; padding-bottom: 10px;">
@@ -67,5 +88,7 @@
       </footer>
 
 </section>
+</div>
+<script src="main.js"></script>
 </body>
 </html>

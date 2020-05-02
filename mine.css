@@ -1,11 +1,15 @@
 label {
     display: inline-block;
-    width: 100px;
+    width: 120px;
+    padding: 12px;
+    margin: none;
     height: 50px;
+    border: 1px solid #252525;
     color: #5D5D5D;
-    background-color: #303030;
-    margin: 0px;
-    border: none;
+    background-color: #252525;
+    
+    transition: 0.5s;
+
 }
 input[type="radio"] {
     display:none;
@@ -13,11 +17,13 @@ input[type="radio"] {
 input[type="radio"]:checked + label {
     border: solid 1px #ebebeb;
     color: #ebebeb;
+    background-color: #202020;
+    background-color: #303030;
+    transition: 0.5s;
     
 }
 label{
     border-radius: 5px 0px 0px 5px;
-    height: 2em;
 }
 label:last-child{
     border-radius: 0px 5px 5px 0px;
