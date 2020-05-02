@@ -32,6 +32,22 @@ new Vue({
                 this.theimage = "img/brazil.svg"
 
             }
+        
+        },
+        getNumbersAnim: function(){
+            var funcao = this.getNumbers;
+            var queijo = this.$refs.contentBox;
+            queijo.classList.add("shrink")
+            setTimeout(function(){
+                
+                queijo.classList.remove("shrink");
+                queijo.classList.add("grow");
+                
+                funcao();
+            },400);
+           
+            queijo.classList.remove("grow");
+            
         }
     },
     mounted: function(){

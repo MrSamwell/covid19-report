@@ -21,8 +21,8 @@
     <!-- INPUT RADIO BUTTONS  -->
     <div class="columns has-text-centered">
         <div class="column">
-            <input type="radio" id="local1" name="local" checked ref='radioMundo' v-on:change="getNumbers()"><label for="local1">Mundo</label>
-            <input type="radio" id="local2" name="local" id="radioBrasil" v-on:change="getNumbers()"><label for="local2">Brasil</label>
+            <input type="radio" id="local1" name="local" checked ref='radioMundo' v-on:change="getNumbersAnim()"><label for="local1">Mundo</label>
+            <input type="radio" id="local2" name="local" id="radioBrasil" v-on:change="getNumbersAnim()"><label for="local2">Brasil</label>
         </div>
         </div>
         <div class="columns">
@@ -30,7 +30,7 @@
         </div>
 
     <!-- WORLD/BRAZIL VECTOR -->
-    <div class="columns ">
+    <div class="columns " ref='contentBox'>
         
         <div class="column has-text-centered">
             <figure>
