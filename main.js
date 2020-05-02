@@ -4,7 +4,8 @@ new Vue({
         apiData: {},
         deaths: 0,
         cases: 0,
-        recovered: 0
+        recovered: 0,
+        theimage: ''
     },
     methods: {
         getApiData: function() {
@@ -22,11 +23,14 @@ new Vue({
             this.deaths = this.apiData.Global.TotalDeaths;
             this.cases = this.apiData.Global.TotalConfirmed;
             this.recovered = this.apiData.Global.TotalRecovered;
+            this.theimage = "img/world.svg"
             }
             else{
                 this.deaths = this.apiData.Countries[29].TotalDeaths;
                 this.cases = this.apiData.Countries[29].TotalConfirmed;
                 this.recovered = this.apiData.Countries[29].TotalRecovered;
+                this.theimage = "img/brazil.svg"
+
             }
         }
     },
