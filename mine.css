@@ -59,26 +59,6 @@ body{
 .grow{
     animation: 0.35s ease-in 0s 1 slideIn;
 }
-  @keyframes grow {
-      
-    0%{
-        transform: scale(0,0);
-    }
-    100%{
-        transform: scale(1,1);
-    }
-    
-}
-  @keyframes shrink {
-
-    0%{
-        transform: scale(1,1);
-    }
-    100%{
-        transform: scale(0,0);
-    }
-    
-}
 
 @keyframes slideIn{
     0% {
