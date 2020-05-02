@@ -10,20 +10,18 @@ new Vue({
         getApiData: function() {
             fetch(`https://api.covid19api.com/summary`)
             .then(response => response.json())
-            .then(data => { this.apiData = data; 
-                })
-            
+            .then(data => { 
+                this.apiData = data;
+                this.getNumbers();
+            })
             .catch(err => alert("Woops! Something went wrong."))
         },
         getNumbers: function(){
-            this.getApiData();
-            alert(this.apiData)
-
+            console.log(this.apiData); 
         }
     },
     mounted: function(){
-        this.getNumbers();
-        
+        this.getApiData();
     }
     
 })
