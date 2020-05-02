@@ -1,7 +1,7 @@
 new Vue({
     el: '#app',
     data: {
-        apiData: false,
+        apiData: {},
         deaths: 0,
         cases: 0,
         recovered: 0
