@@ -44,7 +44,7 @@ new Vue({
                 queijo.classList.add("grow");
                 
                 funcao();
-            },400);
+            },350);
            
             queijo.classList.remove("grow");
             

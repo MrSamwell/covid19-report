@@ -54,10 +54,10 @@ body{
   }
   
 .shrink{
-    animation: 0.5s ease-out 0s 1 slideOut;
+    animation: 0.35s ease-out 0s 1 slideOut;
 }
 .grow{
-    animation: 0.5s ease-in 0s 1 slideIn;
+    animation: 0.35s ease-in 0s 1 slideIn;
 }
   @keyframes grow {
       
