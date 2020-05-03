@@ -53,6 +53,7 @@ new Vue({
         getNumbersAnim: function(){
             var funcao = this.getNumbers;
             var queijo = this.$refs.contentBox;
+            if(this.$refs.radioMundo.checked){
             queijo.classList.add("shrink")
             setTimeout(function(){
                 
@@ -63,7 +64,19 @@ new Vue({
             },350);
            
             queijo.classList.remove("grow");
-            
+        }
+        else{
+            queijo.classList.add("shrink")
+            setTimeout(function(){
+                
+                queijo.classList.remove("shrink");
+                queijo.classList.add("grow");
+                
+                funcao();
+            },350);
+           
+            queijo.classList.remove("grow");
+        }
         },
         formatarData: function(data) {
             numeros = data.split('-');
