@@ -44,7 +44,10 @@ new Vue({
             let minutes = (update.getMinutes()<10?'0':'') + update.getMinutes();
             let seconds = update.getSeconds();
             let str = `${day}/${month}/${year} ás ${hours}:${minutes}:${seconds}`;
-            this.lastUpdate = str;
+            this.lastUpdate = str;        
+        },
+        toLocaleString: function(valor){
+                return valor.toLocaleString('pt-BR');
             
         },
         getNumbersAnim: function(){
