@@ -28,9 +28,9 @@ new Vue({
             this.theimage = "img/world.svg"
             }
             else{
-                this.deaths = this.apiData.Countries[29].TotalDeaths;
-                this.cases = this.apiData.Countries[29].TotalConfirmed;
-                this.recovered = this.apiData.Countries[29].TotalRecovered;
+                this.deaths = this.apiData.Countries[30].TotalDeaths;
+                this.cases = this.apiData.Countries[30].TotalConfirmed;
+                this.recovered = this.apiData.Countries[30].TotalRecovered;
                 this.theimage = "img/brazilmap.svg"
             }
             this.setDateFormat();
