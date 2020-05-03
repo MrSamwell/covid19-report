@@ -29,7 +29,7 @@ new Vue({
                 this.deaths = this.apiData.Countries[29].TotalDeaths;
                 this.cases = this.apiData.Countries[29].TotalConfirmed;
                 this.recovered = this.apiData.Countries[29].TotalRecovered;
-                this.theimage = "img/brazil.svg"
+                this.theimage = "img/brazilmap.svg"
 
             }
         
