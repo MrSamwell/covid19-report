@@ -34,6 +34,7 @@ new Vue({
             }
         
         },
+        
         getNumbersAnim: function(){
             var funcao = this.getNumbers;
             var queijo = this.$refs.contentBox;
@@ -48,6 +49,11 @@ new Vue({
            
             queijo.classList.remove("grow");
             
+        },
+        formatarData: function(data) {
+            numeros = data.split('-');
+            dataFormatada = `${numeros[2]}/${numeros[1]}/${numeros[0]}`;
+            return dataFormatada;
         }
     },
     mounted: function(){
