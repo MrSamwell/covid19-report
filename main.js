@@ -5,9 +5,11 @@ new Vue({
         deaths: 0,
         cases: 0,
         recovered: 0,
-        theimage: ''
+        theimage: '',
+        lastUpdate: ''
     },
-    methods: {
+    methods: 
+        {
         getApiData: function() {
             fetch(`https://api.covid19api.com/summary`)
             .then(response => response.json())
@@ -30,11 +32,21 @@ new Vue({
                 this.cases = this.apiData.Countries[29].TotalConfirmed;
                 this.recovered = this.apiData.Countries[29].TotalRecovered;
                 this.theimage = "img/brazilmap.svg"
-
             }
-        
+            this.setDateFormat();
         },
-        
+        setDateFormat: function(){
+            let update = new Date(this.apiData.Date);
+            let day = update.getDate();
+            let month = update.getMonth() + 1;
+            let year = update.getFullYear();
+            let hours = (update.getHours()<10?'0':'') + update.getHours();
+            let minutes = (update.getMinutes()<10?'0':'') + update.getMinutes();
+            let seconds = update.getSeconds();
+            let str = `${day}/${month}/${year} ás ${hours}:${minutes}:${seconds}`;
+            this.lastUpdate = str;
+            
+        },
         getNumbersAnim: function(){
             var funcao = this.getNumbers;
             var queijo = this.$refs.contentBox;
