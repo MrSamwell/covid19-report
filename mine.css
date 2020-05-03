@@ -54,6 +54,7 @@ body{
     footer{
         position: relative;
         top: 150px;
+        background-color: transparent;
         
     }
 }
